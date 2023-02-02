@@ -689,9 +689,7 @@ class SASREC(tf.keras.Model):
 
             step_loss = []
             train_loss.reset_states()
-            for step in tqdm(
-                range(num_steps), total=num_steps, ncols=70, leave=False, unit="b"
-            ):
+            for step in range(num_steps):
 
                 u, seq, pos, neg = sampler.next_batch()
 
@@ -739,7 +737,7 @@ class SASREC(tf.keras.Model):
         else:
             users = range(1, usernum + 1)
 
-        for u in tqdm(users, ncols=70, leave=False, unit="b"):
+        for u in users:
 
             if len(train[u]) < 1 or len(test[u]) < 1:
                 continue
@@ -799,7 +797,7 @@ class SASREC(tf.keras.Model):
         else:
             users = range(1, usernum + 1)
 
-        for u in tqdm(users, ncols=70, leave=False, unit="b"):
+        for u in users:
             if len(train[u]) < 1 or len(valid[u]) < 1:
                 continue
 

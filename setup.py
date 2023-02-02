@@ -103,41 +103,43 @@ extras_require["nni"] = [
 # Temporary fix for pymanopt, only this commit works with TF2
 # "pymanopt@https://github.com/pymanopt/pymanopt/archive/fb36a272cdeecb21992cfd9271eb82baafeb316d.zip",
 
-setup(
-    name="recommenders",
-    version=version,
-    description="Microsoft Recommenders - Python utilities for building recommender systems",
-    long_description=LONG_DESCRIPTION,
-    long_description_content_type="text/markdown",
-    url="https://github.com/microsoft/recommenders",
-    project_urls={
-        "Documentation": "https://microsoft-recommenders.readthedocs.io/en/stable/",
-        "Wiki": "https://github.com/microsoft/recommenders/wiki",
-    },
-    author="RecoDev Team at Microsoft",
-    author_email="RecoDevTeam@service.microsoft.com",
-    classifiers=[
-        "Development Status :: 5 - Production/Stable",
-        "Intended Audience :: Developers",
-        "Intended Audience :: Information Technology",
-        "Intended Audience :: Science/Research",
-        "Topic :: Scientific/Engineering :: Artificial Intelligence",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Operating System :: Microsoft :: Windows",
-        "Operating System :: POSIX :: Linux",
-        "Operating System :: MacOS",
-    ],
-    extras_require=extras_require,
-    keywords="recommendations recommendation recommenders recommender system engine "
-    "machine learning python spark gpu",
-    install_requires=install_requires,
-    package_dir={"recommenders": "recommenders"},
-    python_requires=">=3.6, <3.10",
-    packages=find_packages(where=".", exclude=["contrib", "docs", "examples", "scenarios", "tests", "tools"]),
-    setup_requires=["numpy>=1.15"]
-)
+setup(name='recommenders', version='1.0', packages=find_packages())
+
+# setup(
+#     name="recommenders",
+#     version=version,
+#     description="Microsoft Recommenders - Python utilities for building recommender systems",
+#     long_description=LONG_DESCRIPTION,
+#     long_description_content_type="text/markdown",
+#     url="https://github.com/microsoft/recommenders",
+#     project_urls={
+#         "Documentation": "https://microsoft-recommenders.readthedocs.io/en/stable/",
+#         "Wiki": "https://github.com/microsoft/recommenders/wiki",
+#     },
+#     author="RecoDev Team at Microsoft",
+#     author_email="RecoDevTeam@service.microsoft.com",
+#     classifiers=[
+#         "Development Status :: 5 - Production/Stable",
+#         "Intended Audience :: Developers",
+#         "Intended Audience :: Information Technology",
+#         "Intended Audience :: Science/Research",
+#         "Topic :: Scientific/Engineering :: Artificial Intelligence",
+#         "Topic :: Software Development :: Libraries :: Python Modules",
+#         "License :: OSI Approved :: MIT License",
+#         "Programming Language :: Python :: 3.6",
+#         "Programming Language :: Python :: 3.7",
+#         "Programming Language :: Python :: 3.8",
+#         "Programming Language :: Python :: 3.9",
+#         "Operating System :: Microsoft :: Windows",
+#         "Operating System :: POSIX :: Linux",
+#         "Operating System :: MacOS",
+#     ],
+#     extras_require=extras_require,
+#     keywords="recommendations recommendation recommenders recommender system engine "
+#     "machine learning python spark gpu",
+#     install_requires=install_requires,
+#     package_dir={"recommenders": "recommenders"},
+#     python_requires=">=3.6, <3.10",
+#     packages=find_packages(where=".", exclude=["contrib", "docs", "examples", "scenarios", "tests", "tools"]),
+#     setup_requires=["numpy>=1.15"]
+# )
