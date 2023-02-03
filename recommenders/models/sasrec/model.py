@@ -2,7 +2,6 @@
 # Licensed under the MIT License.
 import random
 import numpy as np
-from tqdm import tqdm
 import tensorflow as tf
 
 from recommenders.utils.timer import Timer
@@ -697,6 +696,8 @@ class SASREC(tf.keras.Model):
 
                 loss = train_step(inputs, target)
                 step_loss.append(loss)
+
+            print(f"\nepoch: {epoch}, loss {loss.numpy()})")
 
             if epoch % val_epoch == 0:
                 t0.stop()
