@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=SASRecBeauty
+#SBATCH --job-name=SequentailMoreEpochs
 #SBATCH --cpus-per-task=4
 #SBATCH --gres=gpu:1
 #SBATCH --time=24:00:00
@@ -10,8 +10,14 @@
 #srun -u source activate /home/melissafm/anaconda3/envs/torchrl
 
 # Datasets
-srun -u python sasrec_amazon.py
-#srun -u python main.py --dataset=ml-1m --train_dir=default --maxlen=200 --dropout_rate=0.2 --device=cuda
-#srun -u python main.py --dataset=Steam --train_dir=default --maxlen=200 --dropout_rate=0.2 --device=cuda
+#srun -u python sasrec_amazon.py --model='sasrec' --dataset='reviews_Books_5'
+#srun -u python sasrec_amazon.py --model='sasrec' --dataset='reviews_Beauty_5'
+#srun -u python sasrec_amazon.py --model='sasrec' --dataset='reviews_Electronics_5'
+
+#srun -u python sasrec_amazon.py --model='ssept' --dataset='reviews_Books_5'
+#srun -u python sasrec_amazon.py --model='ssept' --dataset='reviews_Beauty_5'
+#srun -u python sasrec_amazon.py --model='ssept' --dataset='reviews_Electronics_5'
+
+srun -u python sequential_recsys_amazondataset.py
 
 echo "DONE"
