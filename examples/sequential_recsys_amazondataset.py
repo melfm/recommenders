@@ -34,7 +34,7 @@ print("Tensorflow version: {}".format(tf.__version__))
 
 yaml_file = '../recommenders/models/deeprec/config/sli_rec.yaml'  
 
-EPOCHS = 500
+EPOCHS = 5000
 BATCH_SIZE = 400
 RANDOM_SEED = SEED  # Set None for non-deterministic result
 
@@ -54,6 +54,7 @@ reviews_name = 'reviews_Movies_and_TV_5.json'
 meta_name = 'meta_Movies_and_TV.json'
 
 print('Training, ', reviews_name)
+print('Model : SeqModel')
 
 reviews_file = os.path.join(data_path, reviews_name)
 meta_file = os.path.join(data_path, meta_name)

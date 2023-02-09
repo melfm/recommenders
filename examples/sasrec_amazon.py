@@ -47,6 +47,7 @@ if __name__ == "__main__":
     dataset = args.dataset
 
     print('Training on ', dataset, '\n')
+    print('Running model ', args.model)
 
     lr = 0.001             # learning rate
     maxlen = 50            # maximum sequence length for each user
